@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Nunito";
+    src: local("Nunito-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Besley";
+    src: url("./assets/fonts/Besley-Regular.ttf") format('truetype');
+}
+
+head, body {
+    background-color: #fae4c9;
+    color: #0c611b;
+    font-family: "Besley", serif;
+}
+
+header {
+    color: #0c611b;
+    font-family: "Besley", serif, 48px;
+}
+
+h1 {
+    align-self: left;
+}
