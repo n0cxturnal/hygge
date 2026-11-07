@@ -5,9 +5,17 @@
 
 @font-face {
     font-family: "Besley";
-    src: url("./assets/fonts/Besley-Regular.ttf") format('truetype');
+    src: url("./assets/fonts/Besley-VariableFont_wght.ttf") format('truetype');
 }
-
+/* TODO:
+Classes:
+- widget: Independent containers that appear in the room's container.
+- pfpicon: Icon images for user pfp's
+- dashWidget: A widget on the dashboard widget
+- widgetLabel: Labels at the top of each dashWidget signifying their use
+- check: The appearance of checkboxes
+- 
+ */
 head, body {
     background-color: #fae4c9;
     color: #0c611b;
@@ -22,3 +30,41 @@ header {
 h1 {
     align-self: left;
 }
+
+/* TODO:
+IDs:
+- roomContainer: the container for everything in the study room screen
+
+Room Status Bar:
+- roomMenu: the container for the room status bar at the top
+- roomHome: the button to hygge's home page
+- settings: the settings button to config room
+- roomName: the title of the room
+- shareButton: the button to add others to the room
+
+Guest List:
+- guestList: the independent guest list widget on the left of the room
+- guestIcons: the list of pfp's that go down the guestList container
+- addGuest: the button to add a guest to the study room
+
+Dashboard:
+- dashboard: the independent dashboard widget on the right of the room
+
+- timerWidget: the container for the timer tool
+- timerLabel: The label for the timer widget
+- timer: the actual timer lol
+- timerPlay: the timer's play/pause button
+- timerReset: the timer's reset button
+
+- todoWidget: the container for the to-do list tool
+- todoLabel: the label for the to-do list widget
+- taskList: the list of user tasks (note: might make nested tasks)
+- taskInput: the input box to add a task
+
+- chatWidget: the container for the room's chat
+- chatLabel: the label for the chat widget
+- chat: the display of the room's chat/chat history
+- typeBox: the area where the user types a message
+- chatBox: the actual message input from the user
+- sendButton: the send button for the chat
+ */

@@ -1,13 +1,39 @@
 import { useState } from 'react'
 import './App.css'
 
+function RoomStatus(){
+  return (
+    <>
+    <div id="roomMenu" className="widget">
+      <button id="roomHome">home</button>
+      <button id="settings"></button>
+      <p id="roomName">room title</p>
+      <button id="shareButton">add ur friends twin</button>
+    </div>
+    </>
+  )
+}
+function GuestList(){
+  return (
+    <>
+    <div id="guestList" className="widget">
+      <ul id="guestIcons">
+        <li className="pfpicon">pfp1</li>
+        <li className="pfpicon">pfp2</li>
+        <li className="pfpicon">pfp3</li>
+      </ul>
+      <button id="addGuest">add a user</button>
+    </div>
+    </>
+  )
+}
 function Dashboard(){
   return (
     <>
-    <div id="dashboard" class="widget">
+    <div id="dashboard" className="widget">
       {/* Timer */}
-      <div class="dashWidget" id="timerWidget">
-        <header class="widgetLabel" id="timerLabel">
+      <div className="dashWidget" id="timerWidget">
+        <header className="widgetLabel" id="timerLabel">
           Timer
           </header>
         <div id="timer">
@@ -26,31 +52,29 @@ function Dashboard(){
         <div></div> 
       </div>
       {/* To-do list */}
-      <div class="dashWidget" id="todoWidget">
-        <header class="widgetLabel" id="todoLabel">
+      <div className="dashWidget" id="todoWidget">
+        <header className="widgetLabel" id="todoLabel">
           To-do List
         </header>
-        <ol>
-          <li>study<button class="check"></button></li>
-          <li>get burnt tf out<button class="check"></button></li>
-          <li>repeat<button class="check"></button></li>
+        <ol id="taskList">
+          <li>study<input className="check" type="checkbox" /></li>
+          <li>get burnt tf out<input className="check" type="checkbox" /></li>
+          <li>repeat<input className="check" type="checkbox" /></li>
         </ol>
         <footer>
-          add a task
+          <input type="text" placeholder="add a task..." id="taskInput"/>
         </footer>
       </div>
     </div>
     {/* Chatbox */}
-    <div class="dashWidget" id="chatWidget">
-      <header class="widgetLabel" id="chatLabel"></header>
+    <div className="dashWidget" id="chatWidget">
+      <header className="widgetLabel" id="chatLabel"></header>
       <p id="chat"></p>
       <footer>
         <div id="typeBox">
-          <div id="typeInput">yap here</div>
-          <div id="sendContainer">
-            <button>send</button>
-          </div>
-          </div>
+          <textarea id="chatBox" name="chatBox" placeholder="yap here"></textarea>
+          <input type="submit" label="send" id="sendButton"/>
+        </div>
       </footer>
     </div>
     </>
@@ -65,8 +89,12 @@ function App() {
     <header>
       <h1>hygge</h1>
     </header>
-      <div>
+    <nav>
+      <RoomStatus />
+    </nav>
+      <div id="roomContainer">
         <p>hygge ultra mega alpha version (wip)</p>
+        <GuestList />
         <Dashboard />
       </div>
     </>
